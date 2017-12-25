@@ -1,6 +1,6 @@
 #ifndef NOTEPAD_H
 #define NOTEPAD_H
-
+#include <fstream>
 #include <QMainWindow>
 #include <QFile>
 #include <QFileDialog>

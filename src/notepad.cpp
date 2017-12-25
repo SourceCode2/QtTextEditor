@@ -52,9 +52,9 @@ void Notepad::on_actionSave_triggered()
 void Notepad::on_actionSave_as_triggered()
 {
     QString fileName = QFileDialog::getSaveFileName(this, "Save as");
-    QFile file(CurrentFile);
+    QFile file(fileName);
     if (!file.open(QIODevice::ReadWrite | QFile::Text)) {
-        QMessageBox::warning(this, "..", "No file opened. Use Save As");
+        QMessageBox::warning(this, "..", "No file opened.");
         return;
     }
     QTextStream out(&file);
